@@ -5,3 +5,8 @@ libprussdrv.a: prussdrv.o
 
 prussdrv.o: prussdrv.c __prussdrv.h
 	$(CC) $(CFLAGS) -I. -c prussdrv.c -o $@
+
+.PHONY: clean
+
+clean:
+	rm -f libprussdrv.a prussdrv.o
